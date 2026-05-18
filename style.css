@@ -2094,3 +2094,46 @@ body.bankai-active .detail-box {
 body.bankai-active .transition-marquee {
   text-shadow: 0 0 20px rgba(225, 29, 46, 0.4);
 }
+
+/* ===== MOBILE BLOCKER ===== */
+.mobile-blocker {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-color, #000);
+  color: var(--text-color, #fff);
+  z-index: 99999999;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.mobile-blocker-content {
+  max-width: 400px;
+}
+
+.mobile-blocker h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--accent-color, #ff6600);
+  letter-spacing: 2px;
+}
+
+.mobile-blocker p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .mobile-blocker {
+    display: flex;
+  }
+  
+  body {
+    overflow: hidden !important;
+  }
+}
